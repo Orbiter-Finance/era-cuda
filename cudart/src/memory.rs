@@ -117,7 +117,7 @@ impl Default for CudaHostAllocFlags {
 }
 
 #[repr(transparent)]
-#[derive(Debug)]
+#[derive(Debug,  Eq, PartialEq)]
 pub struct HostAllocation<T>(AllocationData<T>);
 
 impl<T> HostAllocation<T> {

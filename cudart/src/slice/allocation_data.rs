@@ -2,7 +2,7 @@ use std::slice;
 
 use crate::slice::{CudaSlice, CudaSliceMut};
 
-#[derive(Debug)]
+#[derive(Debug, Eq, PartialEq)]
 pub(crate) struct AllocationData<T> {
     pub ptr: *mut T,
     pub len: usize,
